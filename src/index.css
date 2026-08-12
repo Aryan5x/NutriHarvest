@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F9F7F2;
+    color: #2D302D;
+  }
+  
+  h1, h2, h3, .font-serif {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar matching natural tones theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EBE7DF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D4C7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A6741;
+}
+
+/* Utility classes for Natural Tones palette */
+.bg-natural-bg { background-color: #F9F7F2; }
+.bg-natural-stone { background-color: #EBE7DF; }
+.bg-natural-stone-light { background-color: #F2EDE4; }
+.bg-natural-card { background-color: #FFFFFF; }
+.bg-natural-sage { background-color: #F2F8F0; }
+.bg-natural-cream { background-color: #FDF9F3; }
+.bg-natural-forest { background-color: #4A6741; }
+.bg-natural-forest-dark { background-color: #3A5033; }
+.bg-natural-terracotta { background-color: #D4A373; }
+
+.text-natural-forest { color: #4A6741; }
+.text-natural-terracotta { color: #D4A373; }
+.text-natural-earth { color: #8B5E34; }
+.text-natural-main { color: #2D302D; }
+.text-natural-muted { color: #6B6E6B; }
+.text-natural-light { color: #8C8F8C; }
+
+.border-natural-stone { border-color: #D9D4C7; }
+.border-natural-light { border-color: #EBE7DF; }
+.border-natural-forest { border-color: #4A6741; }

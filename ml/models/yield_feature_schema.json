@@ -1,0 +1,30 @@
+{
+  "categorical_features": [
+    "Crop",
+    "Season",
+    "State"
+  ],
+  "numerical_features": [
+    "Crop_Year",
+    "Area",
+    "Annual_Rainfall",
+    "Fertilizer",
+    "Pesticide",
+    "Avg_Temperature",
+    "Max_Temperature",
+    "Min_Temperature"
+  ],
+  "target_feature": "Yield",
+  "supported_crops": [
+    "Wheat",
+    "Rice",
+    "Gram",
+    "Rapeseed &Mustard",
+    "Cotton(lint)",
+    "Sugarcane",
+    "Bajra",
+    "Maize",
+    "Potato",
+    "Moong(Green Gram)"
+  ]
+}

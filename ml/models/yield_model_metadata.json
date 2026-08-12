@@ -1,0 +1,138 @@
+{
+  "model_version": "2.0.0-xgb-log1p",
+  "algorithm": "XGBRegressor",
+  "random_seed": 42,
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "target_transform": "log1p"
+  },
+  "approved_crops": [
+    "Wheat",
+    "Rice",
+    "Gram",
+    "Rapeseed &Mustard",
+    "Cotton(lint)",
+    "Sugarcane",
+    "Bajra",
+    "Maize",
+    "Potato",
+    "Moong(Green Gram)"
+  ],
+  "excluded_crops": [
+    "Tomato (absent from dataset)"
+  ],
+  "excluded_features": {
+    "Production": "Target leakage (Yield = Production / Area)",
+    "District": "Not present in dataset",
+    "Soil_N_P_K_pH": "Not present in dataset"
+  },
+  "input_features": {
+    "categorical": [
+      "Crop",
+      "Season",
+      "State"
+    ],
+    "numerical": [
+      "Crop_Year",
+      "Area",
+      "Annual_Rainfall",
+      "Fertilizer",
+      "Pesticide",
+      "Avg_Temperature",
+      "Max_Temperature",
+      "Min_Temperature"
+    ]
+  },
+  "target": "Yield (Tonnes per Hectare)",
+  "splits": {
+    "train_years": "1997-2018",
+    "validation_year": "2019",
+    "test_year": "2020"
+  },
+  "metrics": {
+    "training": {
+      "samples": 6353,
+      "mae": 0.8698027300877063,
+      "rmse": 6.527477205365277,
+      "r2": 0.9127419141845042
+    },
+    "validation_2019": {
+      "samples": 343,
+      "mae": 1.0721986701349475,
+      "rmse": 3.3965633573612757,
+      "r2": 0.9640353175940389
+    },
+    "test_2020": {
+      "samples": 12,
+      "mae": 0.7254084406693782,
+      "rmse": 1.8282086352469111,
+      "r2": 0.9930280720137216
+    },
+    "per_crop_validation_2019": {
+      "Wheat": {
+        "samples": 26,
+        "mae": 0.2884280195603004,
+        "rmse": 0.3953990259768781,
+        "r2": 0.8931972874168984
+      },
+      "Rice": {
+        "samples": 61,
+        "mae": 0.31182991146650474,
+        "rmse": 0.4063383371965176,
+        "r2": 0.7198748371116022
+      },
+      "Gram": {
+        "samples": 24,
+        "mae": 0.202057909488678,
+        "rmse": 0.2713818307919288,
+        "r2": 0.5322295971443911
+      },
+      "Rapeseed &Mustard": {
+        "samples": 27,
+        "mae": 0.1698308834058267,
+        "rmse": 0.24435874858890816,
+        "r2": 0.792310596758403
+      },
+      "Cotton(lint)": {
+        "samples": 24,
+        "mae": 0.7781637078126273,
+        "rmse": 1.0188124295165306,
+        "r2": 0.24605320882383164
+      },
+      "Sugarcane": {
+        "samples": 26,
+        "mae": 8.09065757568066,
+        "rmse": 11.917948422301448,
+        "r2": 0.8582340106310479
+      },
+      "Bajra": {
+        "samples": 29,
+        "mae": 0.5248480592924972,
+        "rmse": 1.068354675002074,
+        "r2": 0.8796759849921469
+      },
+      "Maize": {
+        "samples": 50,
+        "mae": 0.5014455437469483,
+        "rmse": 0.7282514711777763,
+        "r2": 0.7953798252428917
+      },
+      "Potato": {
+        "samples": 34,
+        "mae": 1.684913574443144,
+        "rmse": 2.176000121323655,
+        "r2": 0.9060821227338857
+      },
+      "Moong(Green Gram)": {
+        "samples": 42,
+        "mae": 0.12370496846380688,
+        "rmse": 0.1587844915136579,
+        "r2": 0.6130138492299095
+      }
+    }
+  }
+}
